@@ -111,6 +111,7 @@ c3_chart_internal_fn.getDefaultConfig = function () {
         axis_x_height: undefined,
         axis_x_extent: undefined,
         axis_x_label: {},
+        axis_y_width: undefined,
         axis_y_show: true,
         axis_y_type: undefined,
         axis_y_max: undefined,
@@ -121,7 +122,7 @@ c3_chart_internal_fn.getDefaultConfig = function () {
         axis_y_label: {},
         axis_y_tick_format: undefined,
         axis_y_tick_outer: true,
-        axis_y_tick_values: null,        
+        axis_y_tick_values: null,
         axis_y_tick_rotate: 0,
         axis_y_tick_count: undefined,
         axis_y_tick_time_value: undefined,
@@ -225,6 +226,9 @@ c3_chart_internal_fn.getDefaultConfig = function () {
             left: 0
         },
         title_position: 'top-center',
+        //TouchEvent configuration
+        touch_tap_radius : 20,  //touch movement must be less than this to be a 'tap'
+        touch_tap_delay : 500,  //clicks are suppressed for this many ms after a tap
     };
 
     Object.keys(this.additionalConfig).forEach(function (key) {
